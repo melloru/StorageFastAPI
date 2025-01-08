@@ -1,7 +1,9 @@
-from fastapi import FastAPI
 import uvicorn
+
+from fastapi import FastAPI
+
 from api import router as storage_router
-from core.config import Settings, settings
+from core.config import settings
 
 app = FastAPI()
 
