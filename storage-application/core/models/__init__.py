@@ -1,12 +1,11 @@
 __all__ = (
-    "db_helper",
     "Base",
     "Product",
     "Order",
+    "OrderProductAssociation",
 )
 
 
-from .db_helper import db_helper
 from .base import Base
 from .product import Product
 from .order import Order

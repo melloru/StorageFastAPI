@@ -4,11 +4,13 @@ from sqlalchemy.orm import Mapped, relationship
 
 from core.models import Base
 
+from .mixins import IntIdPkMixin
+
 if TYPE_CHECKING:
     from .order_product_association import OrderProductAssociation
 
 
-class Product(Base):
+class Product(IntIdPkMixin, Base):
     name: Mapped[str]
     description: Mapped[str]
     price: Mapped[int]
